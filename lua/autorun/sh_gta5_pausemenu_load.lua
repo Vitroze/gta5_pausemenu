@@ -1,4 +1,4 @@
-hook.Add("VLib_Loaded", "VLib_Loaded:PauseMenu", function()
+hook.Add("VLib_Loaded", "VLib_Loaded:GTA5_PauseMenu", function()
     GTA5_PauseMenu = GTA5_PauseMenu or {}
     GTA5_PauseMenu.Version = "1.0.0"
     GTA5_PauseMenu.Config = GTA5_PauseMenu.Config or {}
@@ -7,9 +7,9 @@ hook.Add("VLib_Loaded", "VLib_Loaded:PauseMenu", function()
     local sDirectory = "gta5_pausemenu/"
 
     -- Client 
-    VLib:loadFileClient(sDirectory .. "client/cl_functions.lua")
-    VLib:loadFileClient(sDirectory .. "client/cl_hooks.lua")
-    VLib:loadFileClient(sDirectory .. "client/cl_network.lua")
+    VLib:loadFileClient(sDirectory .. "client/cl_function.lua")
+    VLib:loadFileClient(sDirectory .. "client/cl_hook.lua")
+    VLib:loadFileClient(sDirectory .. "client/cl_menu.lua")
 
     VLib:loadFileClient(sDirectory .. "client/tabs/cl_game.lua")
     VLib:loadFileClient(sDirectory .. "client/tabs/cl_map.lua")
@@ -38,4 +38,3 @@ hook.Add("VLib_Loaded", "VLib_Loaded:PauseMenu", function()
         end
     end)
 end)
-
