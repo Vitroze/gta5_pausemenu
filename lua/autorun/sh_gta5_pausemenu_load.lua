@@ -42,7 +42,7 @@ hook.Add("VLib_Loaded", "VLib_Loaded:GTA5_PauseMenu", function()
     end)
 
     resource.AddFile("resource/fonts/pricedown.ttf")
+    resource.AddFile("resource/fonts/monopolsemibold.ttf")
+    resource.AddFile("resource/fonts/monopoltrial_medium.ttf")
+
 end)
-resource.AddFile("resource/fonts/pricedown.ttf")
-resource.AddFile("resource/fonts/monopolsemibold.ttf")
-resource.AddFile("resource/fonts/monopoltrial_medium.ttf")
