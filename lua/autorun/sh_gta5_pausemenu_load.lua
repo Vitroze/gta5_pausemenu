@@ -17,6 +17,9 @@ hook.Add("VLib_Loaded", "VLib_Loaded:GTA5_PauseMenu", function()
     VLib:loadFileClient(sDirectory .. "client/tabs/cl_online.lua")
     VLib:loadFileClient(sDirectory .. "client/tabs/cl_settings.lua")
     VLib:loadFileClient(sDirectory .. "client/tabs/cl_stats.lua")
+    VLib:loadFileClient(sDirectory .. "client/tabs/cl_leave.lua")
+    VLib:loadFileClient(sDirectory .. "client/tabs/cl_galerie.lua")
+    VLib:loadFileClient(sDirectory .. "client/tabs/cl_boutique.lua")
 
     -- Server 
     VLib:loadFileServer(sDirectory .. "server/sv_function.lua")
@@ -26,9 +29,9 @@ hook.Add("VLib_Loaded", "VLib_Loaded:GTA5_PauseMenu", function()
     -- Shared 
     VLib:loadFileShared(sDirectory .. "shared/sh_meta.lua")
 
-    for _, vData in ipairs (file.Find(sDirectory .. "shared/languages/*.lua", "LUA")) do
-        VLib:loadFileShared(sDirectory .. "shared/languages/" .. vData)
-    end
+    -- for _, vData in ipairs (file.Find(sDirectory .. "shared/languages/*.lua", "LUA")) do
+    --     VLib:loadFileShared(sDirectory .. "shared/languages/" .. vData)
+    -- end
 
     VLib:CheckVersion("gta5_pausemenu", GTA5_PauseMenu.Version, function(bGoodVersion, iVersionGitHub)
         if bGoodVersion then
@@ -37,4 +40,9 @@ hook.Add("VLib_Loaded", "VLib_Loaded:GTA5_PauseMenu", function()
             MsgC(Color(255, 0, 0), ("[GTA5_PauseMenu] There is a new version available! (v%s) \n"):format(iVersionGitHub))
         end
     end)
+
+    resource.AddFile("resource/fonts/pricedown.ttf")
 end)
+resource.AddFile("resource/fonts/pricedown.ttf")
+resource.AddFile("resource/fonts/monopolsemibold.ttf")
+resource.AddFile("resource/fonts/monopoltrial_medium.ttf")

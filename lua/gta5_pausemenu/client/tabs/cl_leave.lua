@@ -1,6 +1,6 @@
 local PANEL = {}
-PANEL.sName = "Paramètres"
-PANEL.iOrder = 4
+PANEL.sName = "Quitter"
+PANEL.iOrder = 9
 
 function PANEL:Open()
 
